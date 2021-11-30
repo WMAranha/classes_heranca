@@ -18,22 +18,36 @@ class funcionario (pessoa):
         self.cargo = cargo
 
     def print_funcionario(self):
-        print("Nome: ",self.nome)
-        print("RG: ", self.rg)
-        print("Endereço: ", self.endereco)
-        print("Contato: ", self.contato)
-        print("ID: ", self.id_funcionario)
-        print("Cargo: ", self.cargo)
+        try:
+            print("Nome: ",self.nome)
+            print("RG: ", self.rg)
+            print("Endereço: ", self.endereco)
+            print("Contato: ", self.contato)
+            print("ID: ", self.id_funcionario)
+            print("Cargo: ", self.cargo)
+        except Exception as e:
+            print("Erro: ", str(e))
 
     def set_id_funcionario (self, id_funcionario):
-        self.id_funcionario = id_funcionario
+        try:
+            self.id_funcionario = id_funcionario
+        except Exception as e:
+            print("Erro: ", str(e))
 
     def set_cargo (self, cargo):
-        self.cargo = cargo
-
+        try:
+            self.cargo = cargo
+        except Exception as e:
+            print("Erro: ", str(e))
 
     def get_id_funcionario(self):
-        return self.id_funcionario
+        try:
+            return self.id_funcionario
+        except Exception as e:
+            print("Erro: ", str(e))
 
     def get_cargo(self):
-        return self.cargo
+        try:
+            return self.cargo
+        except Exception as e:
+            print("Erro: ", str(e))

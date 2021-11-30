@@ -12,14 +12,23 @@ class aluno (pessoa):
         self.matricula = matricula
 
     def print_aluno(self):
-        print("Nome: ",self.nome)
-        print("RG: ", self.rg)
-        print("Endereço: ", self.endereco)
-        print("Contato: ", self.contato)
-        print("Matrícula: ", self.matricula)
+        try:
+            print("Nome: ",self.nome)
+            print("RG: ", self.rg)
+            print("Endereço: ", self.endereco)
+            print("Contato: ", self.contato)
+            print("Matrícula: ", self.matricula)
+        except Exception as e:
+            print("Erro: ", str(e))
 
     def set_matricula(self, matricula):
-        self.matricula = matricula
+        try:
+            self.matricula = matricula
+        except Exception as e:
+            print("Erro: ", str(e))
 
     def get_matricula(self):
-        return self.matricula
+        try:
+            return self.matricula
+        except Exception as e:
+            print("Erro: ", str(e))

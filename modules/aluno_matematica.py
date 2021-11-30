@@ -13,16 +13,25 @@ class aluno_matematica (aluno):
         self.nota_matematica = nota_matematica
 
     def print_aluno_matematica(self):
-        print("Nome: ",self.nome)
-        print("RG: ", self.rg)
-        print("Endereço: ", self.endereco)
-        print("Contato: ", self.contato)
-        print("Matrícula: ", self.matricula)
-        print("Nota de Matemática: ", self.nota_matematica)
+        try:
+            print("Nome: ",self.nome)
+            print("RG: ", self.rg)
+            print("Endereço: ", self.endereco)
+            print("Contato: ", self.contato)
+            print("Matrícula: ", self.matricula)
+            print("Nota de Matemática: ", self.nota_matematica)
+        except Exception as e:
+            print("Erro: ", str(e))
 
     def set_nota_matematica(self,nota_matematica):
-        self.nota_matematica = nota_matematica
+        try:
+            self.nota_matematica = nota_matematica
+        except Exception as e:
+            print("Erro: ", str(e))
 
     
     def get_nota_matematica(self):
-        return self.nota_matematica
+        try:
+            return self.nota_matematica
+        except Exception as e:
+            print("Erro: ", str(e))

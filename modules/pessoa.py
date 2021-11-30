@@ -14,10 +14,13 @@ class pessoa():
 
     # Criei todos os setters:
     def print_pessoa(self):
-        print("Nome: ",self.nome)
-        print("RG: ", self.rg)
-        print("Endereço: ", self.endereco)
-        print("Contato: ", self.contato)
+        try:
+            print("Nome: ",self.nome)
+            print("RG: ", self.rg)
+            print("Endereço: ", self.endereco)
+            print("Contato: ", self.contato)
+        except Exception as e:
+            print("Erro: ", str(e))
 
     def set_nome(self,nome):
         try:
